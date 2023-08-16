@@ -1,0 +1,148 @@
+/*
+    Theme Name: Правовой эксперт
+    Author: Бурханов Ильдар
+    Author URI: https://vk.com/burhanoff1992
+    Description: Ведущие налоговые эксперты снизят Ваши риски и помогутбезболезненно пройти камеральные и выездные проверки.
+    Requires at least: 6.1
+    Tested up to: 6.3
+    Requires PHP: 5.6
+    Version: 1.0
+    License: GNU General Public License v2 or later
+    License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+    Text Domain: pravx
+    Tags: tag1, tag2, tag3
+*/
+
+:root {
+    /* fonts */
+    --font-default: "Manrope", sans-serif;
+
+    /* colors */
+    --header-bg: #0F0F0F;
+    --text-white: #ffffff;
+    --black: #121212;
+
+    /* etc... */
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1194px;
+    }
+}
+
+img, svg {
+    max-width: 100%;
+}
+
+body {
+    font-family: var(--font-default);
+    font-size: 18px;
+    background-color: #212121;
+}
+
+.header {
+    color: #fff;
+    font-size: 13px;
+}
+
+.header-top {
+    background-color: var(--header-bg);
+}
+
+.header-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    --padding: 9px 0;
+    padding: var(--padding);
+}
+
+.header-info {
+    display: flex;
+    grid-column-gap: 15px;
+}
+
+.header-info-item {
+
+}
+
+.header-info-icon {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.header-info-link {
+    color: var(--text-white);
+    text-decoration: none;
+}
+
+.header-info-link:hover {
+    text-decoration: underline;
+}
+
+.header-social-item {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255, 0.15);
+
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    font-size: 69%;
+}
+
+.header-second {
+    --padding: 30px 0;
+    padding: var(--padding);
+}
+
+.header-logo {
+    display: block;
+}
+
+.header-logo > img,
+.header-logo > svg {
+    height: 44px;
+}
+
+.header-second-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-group {
+    display: flex;
+    align-items: center;
+    grid-column-gap: 40px;
+}
+
+.header-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    grid-column-gap: 40px;
+}
+
+.header-nav-item:first-child {
+    margin-right: 150px;
+}
+
+.header-nav-link {
+    color: var(--text-white);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.header-nav-item:first-child .header-nav-link::after {
+    content: "1";
+}
