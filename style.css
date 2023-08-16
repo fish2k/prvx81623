@@ -21,6 +21,8 @@
     --header-bg: #0F0F0F;
     --text-white: #ffffff;
     --black: #121212;
+    --light: #f6f5f5;
+    --white: #ffffff;
 
     /* etc... */
 }
@@ -141,8 +143,210 @@ body {
     color: var(--text-white);
     text-decoration: none;
     font-weight: 600;
+    font-size: 14px;
 }
 
 .header-nav-item:first-child .header-nav-link::after {
-    content: "1";
+    content: "\e900";
+    font-family: "icomoon" !important;
+    font-size: 50%;
+    line-height: 0;
+    position: relative;
+    left: 8px;
+    top: -1px;
+}
+
+.header-buttons {
+    display: flex;
+    grid-column-gap: 30px;
+}
+
+.burger-icon::after {
+    content: ".";
+    font-size: 0;
+}
+
+.burger-icon {
+    display: block;
+    width: 16px;
+    height: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.burger-icon-line {
+    position: absolute;
+    display: block;
+    height: 1px;
+    background-color: #fff;
+    top: 0;
+    width: 100%;
+}
+
+.burger-icon-line:last-child {
+    top: 5px;
+}
+
+#header {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+.button {
+    display: inline-block;
+    padding: 0 40px;
+    height: 40px;
+    line-height: 36px;
+    background-color: transparent;
+    border: 2px solid rgba(255,255,255, 0.5);
+    color: var(--text-white);
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button-lg {
+    height: 50px;
+    line-height: 46px;
+    padding: 0 30px;
+}
+
+.button-icon {
+    display: inline-block;
+    font-size: 10px;
+    margin-left: 20px;
+    transition: all .2s ease-in-out
+}
+
+.button:hover .button-icon {
+    transform: translateX(5px);
+}
+
+.button-circle {
+    width: 40px;
+    padding: 0;
+}
+
+.button-circle .button-icon {
+    margin-left: 0;
+}
+
+.hero {
+    padding-top: 44px;
+    color: var(--text-white);
+}
+
+.hero-slide {
+    height: 850px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-color: var(--black);
+}
+
+.hero-slide-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(20,20,20, .5);
+}
+
+.hero-slide-title {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.hero-slide-text {
+    margin-bottom: 60px;
+    font-size: 18px;
+}
+
+.hero-slider {
+    position: relative;
+}
+
+.hero-slider-nav {
+    text-align: right;
+    position: absolute;
+    width: 100%;
+    top: calc(50% - 20px);
+    z-index: 2;
+}
+
+.hero-pagination {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 70px !important;
+    z-index: 2;
+
+    display: flex;
+    grid-column-gap: 15px;
+}
+
+.hero-pagination-slide {
+    flex: 1;
+    font-size: 16px;
+    height: 77px;
+
+    opacity: 70%;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+
+    position: relative;
+
+    background-color: transparent;
+}
+
+.hero-pagination-slide.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.hero-pagination-title {
+    padding-left: 6px;
+}
+
+.hero-pagination-progress {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: rgba(255,255,255, 0.2);
+}
+
+.hero-pagination-slide.swiper-pagination-bullet-active span {
+    animation-name: countingBar;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-direction: alternate ;
+    animation-fill-mode: forwards;
+
+    background-color: #fff;
+    display: block;
+    height: 100%;
+}
+
+@keyframes countingBar {
+    0% {width: 0;}
+    100% {width:100%;}
+}
+
+.company {
+    position: relative;
+    z-index: 2;
+    padding: 66px 0;
+    background-color: var(--light);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    margin-top: -30px;
 }
