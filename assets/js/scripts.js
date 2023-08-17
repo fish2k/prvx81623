@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    // $(".header, .hero, .company, .services").hide();
+
     const hero_slider = new Swiper(".hero-slider", {
         slidesPerView: 1,
         loop: true,
