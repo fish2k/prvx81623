@@ -721,7 +721,7 @@ body {
 }
 
 .quote-row {
-    margin: 40px 0;
+    margin: 60px 0 10px;
     position: relative;
 }
 
@@ -739,6 +739,7 @@ body {
 
 .cases {
     background-color: var(--light);
+    position: relative;
 }
 
 .case-photo {
@@ -801,6 +802,7 @@ body {
 
 .reviews {
     background-color: var(--light);
+    overflow: hidden;
 }
 
 .reviews-photo {
