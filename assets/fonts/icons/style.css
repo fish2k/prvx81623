@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?h41c8r');
-  src:  url('fonts/icomoon.eot?h41c8r#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?h41c8r') format('truetype'),
-    url('fonts/icomoon.woff?h41c8r') format('woff'),
-    url('fonts/icomoon.svg?h41c8r#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?h2o8q7');
+  src:  url('fonts/icomoon.eot?h2o8q7#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?h2o8q7') format('truetype'),
+    url('fonts/icomoon.woff?h2o8q7') format('woff'),
+    url('fonts/icomoon.svg?h2o8q7#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,22 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.i-paper-pen .path1:before {
+  content: "\e90a";
+  color: rgb(255, 255, 255);
+}
+.i-paper-pen .path2:before {
+  content: "\e90b";
+  margin-left: -1em;
+  color: rgb(33, 33, 33);
+}
+.i-lock:before {
+  content: "\e90c";
+  color: #fff;
+}
+.i-arrow-short-prev:before {
+  content: "\e909";
+}
 .i-mute-message:before {
   content: "\e906";
   color: #fff;
