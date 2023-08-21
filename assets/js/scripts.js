@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    // $(".header, .hero, .company, .services, .consult, .specs, .quote, .cases, .partners").hide();
+    // $(".header, .hero, .company, .services, .consult, .specs, .quote, .cases, .partners, .reviews").hide();
 
     const hero_slider = new Swiper(".hero-slider", {
         slidesPerView: 1,
@@ -70,5 +70,41 @@ $(document).ready(function() {
         }
     });
 
+    const news_slider = new Swiper(".news-slider", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+
+        navigation: {
+            nextEl: ".news-next",
+            prevEl: ".news-prev",
+        }
+    });
+
     Fancybox.bind("[data-fancybox]", {});
+
+    // map
+    ymaps.ready(init);
+    function init(){
+        // Создание карты.
+        var myMap = new ymaps.Map("map", {
+            // Координаты центра карты.
+            // Порядок по умолчанию: «широта, долгота».
+            // Чтобы не определять координаты центра карты вручную,
+            // воспользуйтесь инструментом Определение координат.
+            center: [55.736402, 37.713764],
+            // Уровень масштабирования. Допустимые значения:
+            // от 0 (весь мир) до 19.
+            zoom: 15
+        });
+
+        // Открываем балун на карте (без привязки к геообъекту).
+        myMap.balloon.open([55.736402, 37.713764], `
+            <div class="balloon-wrap">
+                <img src='assets/img/logo-dark.png' style='height: 47px'>
+            </div>
+        `, {
+            // Опция: не показываем кнопку закрытия.
+            closeButton: false,
+        });
+    }
 });
