@@ -5,7 +5,7 @@ $(document).ready(function() {
         slidesPerView: 1,
         loop: true,
         autoplayDisableOnInteraction: false,
-        effect: "fade",
+        // effect: "fade",
 
         autoplay: {
             delay: 3000
@@ -31,22 +31,41 @@ $(document).ready(function() {
     });
 
     const specs_slider = new Swiper(".specs-slider", {
-        slidesPerView: 3,
-        spaceBetween: 30,
-
         navigation: {
             nextEl: ".spec-next",
             prevEl: ".spec-prev",
+        },
+
+        breakpoints: {
+            320: {
+                slidesPerView: 2.1,
+                spaceBetween: 10,
+                scrollbar: {
+                    el: ".specs-scroll"
+                }
+            },
+            600: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            }
         }
     });
 
     const reviews_slider = new Swiper(".reviews-slider", {
-        slidesPerView: 3,
-        spaceBetween: 30,
-
         navigation: {
             nextEl: ".reviews-next",
             prevEl: ".reviews-prev",
+        },
+
+        breakpoints: {
+            320: {
+                slidesPerView: 2.1,
+                spaceBetween: 10,
+            },
+            600: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            }
         }
     });
 
@@ -57,26 +76,63 @@ $(document).ready(function() {
         navigation: {
             nextEl: ".case-next",
             prevEl: ".case-prev",
+        },
+
+        scrollbar: {
+            el: ".cases-scroll",
+        },
+
+        on: {
+            init: function(e) {
+                $(".slides-count").text((e.activeIndex + 1) + " / " + e.slides.length);
+            },
+            slideChange: function(e) {
+                $(".slides-count").text((e.activeIndex + 1) + " / " + e.slides.length);
+            },
         }
     });
 
     const partners_slider = new Swiper(".partners-slider", {
-        slidesPerView: 6,
-        spaceBetween: 30,
-
         navigation: {
             nextEl: ".partners-next",
             prevEl: ".partners-prev",
+        },
+
+        breakpoints: {
+            320: {
+                slidesPerView: 3,
+                spaceBetween: 0,
+            },
+            600: {
+                slidesPerView: 6,
+                spaceBetween: 30,
+            }
         }
     });
 
     const news_slider = new Swiper(".news-slider", {
-        slidesPerView: 4,
-        spaceBetween: 30,
-
         navigation: {
             nextEl: ".news-next",
             prevEl: ".news-prev",
+        },
+
+        scrollbar: {
+            el: ".news-scroll"
+        },
+
+        breakpoints: {
+            320: {
+                slidesPerView: 1.1,
+                spaceBetween: 15,
+            },
+            600: {
+                slidesPerView: 3,
+                spaceBetween: 15,
+            },
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            }
         }
     });
 
@@ -85,17 +141,18 @@ $(document).ready(function() {
     // map
     ymaps.ready(init);
     function init(){
-        // Создание карты.
         var myMap = new ymaps.Map("map", {
-            // Координаты центра карты.
-            // Порядок по умолчанию: «широта, долгота».
-            // Чтобы не определять координаты центра карты вручную,
-            // воспользуйтесь инструментом Определение координат.
             center: [55.736402, 37.713764],
-            // Уровень масштабирования. Допустимые значения:
-            // от 0 (весь мир) до 19.
             zoom: 15
+        }),
+        myPlacemark = new ymaps.Placemark([55.736402, 37.713764], {
+            balloonContentHeader: "Правовой эксперт",
+            balloonContentBody: "Москва, ул. Смирновская, 25 стр. 16 ",
+            balloonContentFooter: "пн - пт 9:00 - 19:00",
+            hintContent: "Наш адрес"
         });
+
+        myMap.geoObjects.add(myPlacemark);
 
         // Открываем балун на карте (без привязки к геообъекту).
         myMap.balloon.open([55.736402, 37.713764], `

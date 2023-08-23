@@ -36,9 +36,9 @@
     --section-radius: 30px;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     display: none;
-}
+} */
 
 @media (min-width: 1400px) {
     .container {
@@ -117,12 +117,15 @@ body {
 
 .header-logo {
     display: block;
-}
-
-.header-logo > img,
-.header-logo > svg {
+    flex: 0 0 123px;
+    width: 123px;
     height: 44px;
 }
+
+/*.header-logo > img,*/
+/*.header-logo > svg {*/
+/*    */
+/*}*/
 
 .header-second-row {
     display: flex;
@@ -217,6 +220,7 @@ body {
     text-decoration: none;
     cursor: pointer;
     transition: all .2s ease;
+    overflow: hidden;
 }
 
 .button-lg {
@@ -269,7 +273,7 @@ body {
 
 .button-circle {
     width: 40px;
-    padding: 0;
+    padding: 0 !important;
     text-align: center;
 }
 
@@ -284,6 +288,8 @@ body {
 
 .hero {
     color: var(--text-white);
+    position: relative;
+    z-index: 0;
 }
 
 .hero-slide {
@@ -676,6 +682,8 @@ body {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 30px;
+    align-items: center;
+    grid-column-gap: 20px;
 }
 
 .slider-pagination {
@@ -756,7 +764,11 @@ body {
 
 .case-photo {
     border-radius: var(--section-radius);
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
     overflow: hidden;
+    padding-bottom: 119%;
 }
 
 .case-content {
@@ -822,6 +834,9 @@ body {
     padding-bottom: 139%;
     box-shadow: 2px 2px 0 0 rgba(0,0,0, 0.1);
     cursor: pointer;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
 }
 
 .reviews-slide {
@@ -949,6 +964,10 @@ body {
     overflow: hidden;
 }
 
+.container-map {
+    padding: 0;
+}
+
 .contacts > .container {
     position: absolute;
     top: 0;
@@ -1027,4 +1046,26 @@ body {
 
 .footer-link img {
     vertical-align: middle;
+}
+
+.slider-scroll {
+    height: 2px;
+    background-color: rgba(33, 33, 33, 0.15);
+    opacity: 0;
+}
+
+.swiper-scrollbar-drag {
+    background-color: var(--red);
+}
+
+.slides-count {
+    font-size: 16px;
+}
+
+.cases-nav {
+    display: none;
+}
+
+.contacts-mobile {
+    display: none;
 }

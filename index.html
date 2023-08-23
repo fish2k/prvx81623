@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     
     <title>Правовой эксперт</title>
 
@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="assets/libs/swiper/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
 
     <script src="//api-maps.yandex.ru/2.1/?apikey=0f21382d-7fa4-4c06-8f45-1d3591dbcff4&lang=ru_RU"></script>
 </head>
@@ -104,7 +105,7 @@
     </div>
 
     <div class="hero">
-        <div class="hero-slider">
+        <div class="hero-slider swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide hero-slide" data-slide-title="Налоги и право" style="background-image: url(assets/img/hero-slide-1.jpg)">
                     <div class="hero-slide-container">
@@ -197,28 +198,28 @@
 
             <div class="counters">
                 <div class="counters-row row">
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-6">
                         <div class="counter-value">
                             <span class="counter-value-number">12</span>
                             <span class="counter-value-symbol">+</span>
                         </div>
                         <div class="counter-caption">лет успешной практики</div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-6">
                         <div class="counter-value">
                             <span class="counter-value-number">150</span>
                             <span class="counter-value-symbol">+</span>
                         </div>
                         <div class="counter-caption">благодарных клиентов</div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-6">
                         <div class="counter-value">
                             <span class="counter-value-number">92</span>
                             <span class="counter-value-symbol">%</span>
                         </div>
                         <div class="counter-caption">выигранных дел</div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-6">
                         <div class="counter-value">
                             <span class="counter-value-number">630</span>
                             <span class="counter-value-symbol">+</span>
@@ -229,10 +230,10 @@
             </div>
 
             <div class="company-row row">
-                <div class="col-md-5">
+                <div class="col-lg-5 col-md-6 col-sm-12">
                     <img src="assets/img/employee.jpg" alt="">
                 </div>
-                <div class="col-md-7">
+                <div class="col-lg-7 col-md-6 col-sm-12">
                     <div class="company-content">
                         <p>
                             Мы кропотливо работаем над каждым вопросом и нацелены на конкретные результаты.
@@ -267,139 +268,141 @@
 
             <h4 class="section-title">Ключевые услуги нашей компании</h4>
 
-            <div class="services-row row">
-                <div class="col-md-6">
-                    <div class="service-item">
-                        <div class="service-item-count">01</div>
-                        <div class="service-item-body">
-                            <div class="service-item-title">Помощь в выборе системы налогообложения</div>
-                            <div class="service-item-button">
-                                <a href="javascript:void(0)" class="button button-circle button-dark">
-                                    <i class="button-icon i-arrow-short-next"></i>
-                                </a>
+            <div class="services-scroll">
+                <div class="services-row row">
+                    <div class="col-6">
+                        <div class="service-item">
+                            <div class="service-item-count">01</div>
+                            <div class="service-item-body">
+                                <div class="service-item-title">Помощь в выборе системы налогообложения</div>
+                                <div class="service-item-button">
+                                    <a href="javascript:void(0)" class="button button-circle button-dark">
+                                        <i class="button-icon i-arrow-short-next"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-item-count">02</div>
+                            <div class="service-item-body">
+                                <div class="service-item-title">Сопровождение вас на комиссии в налоговый орган</div>
+                                <div class="service-item-button">
+                                    <a href="javascript:void(0)" class="button button-circle button-dark">
+                                        <i class="button-icon i-arrow-short-next"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-item-count">03</div>
+                            <div class="service-item-body">
+                                <div class="service-item-title">Анализ бизнеса на предмет выявления налоговых рисков структуры групп компаний</div>
+                                <div class="service-item-button">
+                                    <a href="javascript:void(0)" class="button button-circle button-dark">
+                                        <i class="button-icon i-arrow-short-next"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-item-count">04</div>
+                            <div class="service-item-body">
+                                <div class="service-item-title">Сопровождение камеральных, выездных проверок</div>
+                                <div class="service-item-button">
+                                    <a href="javascript:void(0)" class="button button-circle button-dark">
+                                        <i class="button-icon i-arrow-short-next"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-item-count">05</div>
+                            <div class="service-item-body">
+                                <div class="service-item-title">Оптимизация Ваших налоговых обязательств</div>
+                                <div class="service-item-button">
+                                    <a href="javascript:void(0)" class="button button-circle button-dark">
+                                        <i class="button-icon i-arrow-short-next"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-item-count">06</div>
+                            <div class="service-item-body">
+                                <div class="service-item-title">Консультация разрывов в ходе КНП (АСК НДС)</div>
+                                <div class="service-item-button">
+                                    <a href="javascript:void(0)" class="button button-circle button-dark">
+                                        <i class="button-icon i-arrow-short-next"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="service-item">
-                        <div class="service-item-count">02</div>
-                        <div class="service-item-body">
-                            <div class="service-item-title">Сопровождение вас на комиссии в налоговый орган</div>
-                            <div class="service-item-button">
-                                <a href="javascript:void(0)" class="button button-circle button-dark">
-                                    <i class="button-icon i-arrow-short-next"></i>
-                                </a>
+                    <div class="col-6">
+                        <div class="service-item">
+                            <div class="service-item-count">07</div>
+                            <div class="service-item-body">
+                                <div class="service-item-title">Консультация по изменениям налогового законодательства РФ в режиме онлайн</div>
+                                <div class="service-item-button">
+                                    <a href="javascript:void(0)" class="button button-circle button-dark">
+                                        <i class="button-icon i-arrow-short-next"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-item-count">03</div>
-                        <div class="service-item-body">
-                            <div class="service-item-title">Анализ бизнеса на предмет выявления налоговых рисков структуры групп компаний</div>
-                            <div class="service-item-button">
-                                <a href="javascript:void(0)" class="button button-circle button-dark">
-                                    <i class="button-icon i-arrow-short-next"></i>
-                                </a>
+                        <div class="service-item">
+                            <div class="service-item-count">08</div>
+                            <div class="service-item-body">
+                                <div class="service-item-title">Оспаривание выводов налогового органа по проверкам</div>
+                                <div class="service-item-button">
+                                    <a href="javascript:void(0)" class="button button-circle button-dark">
+                                        <i class="button-icon i-arrow-short-next"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-item-count">04</div>
-                        <div class="service-item-body">
-                            <div class="service-item-title">Сопровождение камеральных, выездных проверок</div>
-                            <div class="service-item-button">
-                                <a href="javascript:void(0)" class="button button-circle button-dark">
-                                    <i class="button-icon i-arrow-short-next"></i>
-                                </a>
+                        <div class="service-item">
+                            <div class="service-item-count">09</div>
+                            <div class="service-item-body">
+                                <div class="service-item-title">Анализ применения налоговых льгот и пониженных налоговых ставок</div>
+                                <div class="service-item-button">
+                                    <a href="javascript:void(0)" class="button button-circle button-dark">
+                                        <i class="button-icon i-arrow-short-next"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-item-count">05</div>
-                        <div class="service-item-body">
-                            <div class="service-item-title">Оптимизация Ваших налоговых обязательств</div>
-                            <div class="service-item-button">
-                                <a href="javascript:void(0)" class="button button-circle button-dark">
-                                    <i class="button-icon i-arrow-short-next"></i>
-                                </a>
+                        <div class="service-item">
+                            <div class="service-item-count">10</div>
+                            <div class="service-item-body">
+                                <div class="service-item-title">Подготовка разногласий и жалоб в ИФНС, УФНС</div>
+                                <div class="service-item-button">
+                                    <a href="javascript:void(0)" class="button button-circle button-dark">
+                                        <i class="button-icon i-arrow-short-next"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-item-count">06</div>
-                        <div class="service-item-body">
-                            <div class="service-item-title">Консультация разрывов в ходе КНП (АСК НДС)</div>
-                            <div class="service-item-button">
-                                <a href="javascript:void(0)" class="button button-circle button-dark">
-                                    <i class="button-icon i-arrow-short-next"></i>
-                                </a>
+                        <div class="service-item">
+                            <div class="service-item-count">11</div>
+                            <div class="service-item-body">
+                                <div class="service-item-title">Предлагаем минимизировать риски и обезопасить ваш бизнес в рамках законодательства</div>
+                                <div class="service-item-button">
+                                    <a href="javascript:void(0)" class="button button-circle button-dark">
+                                        <i class="button-icon i-arrow-short-next"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="service-item">
-                        <div class="service-item-count">07</div>
-                        <div class="service-item-body">
-                            <div class="service-item-title">Консультация по изменениям налогового законодательства РФ в режиме онлайн</div>
-                            <div class="service-item-button">
-                                <a href="javascript:void(0)" class="button button-circle button-dark">
-                                    <i class="button-icon i-arrow-short-next"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-item-count">08</div>
-                        <div class="service-item-body">
-                            <div class="service-item-title">Оспаривание выводов налогового органа по проверкам</div>
-                            <div class="service-item-button">
-                                <a href="javascript:void(0)" class="button button-circle button-dark">
-                                    <i class="button-icon i-arrow-short-next"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-item-count">09</div>
-                        <div class="service-item-body">
-                            <div class="service-item-title">Анализ применения налоговых льгот и пониженных налоговых ставок</div>
-                            <div class="service-item-button">
-                                <a href="javascript:void(0)" class="button button-circle button-dark">
-                                    <i class="button-icon i-arrow-short-next"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-item-count">10</div>
-                        <div class="service-item-body">
-                            <div class="service-item-title">Подготовка разногласий и жалоб в ИФНС, УФНС</div>
-                            <div class="service-item-button">
-                                <a href="javascript:void(0)" class="button button-circle button-dark">
-                                    <i class="button-icon i-arrow-short-next"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-item-count">11</div>
-                        <div class="service-item-body">
-                            <div class="service-item-title">Предлагаем минимизировать риски и обезопасить ваш бизнес в рамках законодательства</div>
-                            <div class="service-item-button">
-                                <a href="javascript:void(0)" class="button button-circle button-dark">
-                                    <i class="button-icon i-arrow-short-next"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-item-count">12</div>
-                        <div class="service-item-body">
-                            <div class="service-item-title">Участвуем в рассмотрении разногласий налогоплательщика с налоговым органом</div>
-                            <div class="service-item-button">
-                                <a href="javascript:void(0)" class="button button-circle button-dark">
-                                    <i class="button-icon i-arrow-short-next"></i>
-                                </a>
+                        <div class="service-item">
+                            <div class="service-item-count">12</div>
+                            <div class="service-item-body">
+                                <div class="service-item-title">Участвуем в рассмотрении разногласий налогоплательщика с налоговым органом</div>
+                                <div class="service-item-button">
+                                    <a href="javascript:void(0)" class="button button-circle button-dark">
+                                        <i class="button-icon i-arrow-short-next"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -534,6 +537,7 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="slider-scroll specs-scroll"></div>
                     </div>
                 </div>
                 <div class="col-md-3"></div>
@@ -556,8 +560,8 @@
         <div class="quote-inner">
             <div class="container">
                 <div class="quote-row row">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-8">
+                    <div class="col-lg-4 col-md-12"></div>
+                    <div class="col-lg-8 col-md-12">
                         <div class="quote-text">
                             Ум заключается не только в знании, <br>
                             но и в умении прилагать знание на деле.
@@ -584,6 +588,7 @@
 
             <div class="cases-list">
                 <div class="slider-controls">
+                    <div class="slides-count"></div>
                     <div class="slider-pagination">
                         <div class="slider-prev case-prev">
                             <button class="button button-dark button-circle">
@@ -601,10 +606,10 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide case-slide">
                             <div class="case-slide-row row">
-                                <div class="col-md-5">
-                                    <img src="assets/img/case-1.jpg" alt="" class="case-photo">
+                                <div class="col-lg-5 col-md-5">
+                                    <div class="case-photo" style="background-image: url(assets/img/case-1.jpg)"></div>
                                 </div>
-                                <div class="col-md-7">
+                                <div class="col-lg-7 col-md-7">
                                     <div class="case-content">
                                         <h5>Обстоятельства</h5>
 
@@ -638,15 +643,15 @@
                         </div>
                         <div class="swiper-slide case-slide">
                             <div class="case-slide-row row">
-                                <div class="col-md-5">
-                                    <img src="assets/img/case-2.jpg" alt="" class="case-photo">
+                                <div class="col-lg-5 col-md-5">
+                                    <div class="case-photo" style="background-image: url(assets/img/case-2.jpg)"></div>
                                 </div>
-                                <div class="col-md-7 case-center">
+                                <div class="col-lg-7 col-md-7 case-center">
                                     <div class="case-content">
                                         <h5>Обстоятельства</h5>
 
                                         <p>
-                                            Организация заключила с “Правовым экспертом” договор на абоненткой обслуживание работали и консультировали организацию. Спустя некоторое время в организацию стали поступать требования и запросы. По существу поступаемых запросов , “Правовой эксперт”, имея многолетний опыт, предполагал, что происходит предпроверочный анализ, для включения в план выездных проверок.  Сработав оперативно и складно совместно с организацией, каждый представляемый документ в налоговый орган согласовывался и обсуждался. Налоговый орган не смог назначить выездную проверку во главе которой стояло «Дробление бизнеса» … налогоплательщик остался без пристального внимания налогового органа.
+                                            Организация заключила с “Правовым экспертом” договор на абоненткой обслуживание работали и консультировали организацию. Спустя некоторое время в организацию стали поступать требования и запросы. По существу поступаемых запросов , “Правовой эксперт”, имея многолетний опыт, предполагал, что происходит предпроверочный анализ, для включения в план выездных проверок.Сработав оперативно и складно совместно с организацией, каждый представляемый документ в налоговый орган согласовывался и обсуждался. Налоговый орган не смог назначить выездную проверку во главе которой стояло «Дробление бизнеса» … налогоплательщик остался без пристального внимания налогового органа.
                                         </p>
 
                                         <h5>Результат</h5>
@@ -657,6 +662,19 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="cases-nav">
+                        <div class="slider-prev case-prev">
+                            <button class="button button-dark button-circle">
+                                <span class="button-icon i-arrow-short-prev"></span>
+                            </button>
+                        </div>
+                        <div class="slider-scroll cases-scroll"></div>
+                        <div class="slider-next case-next">
+                            <button class="button button-dark button-circle">
+                                <span class="button-icon i-arrow-short-next"></span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -677,7 +695,7 @@
 
             <div class="partners-list">
                 <div class="slider-controls">
-                    <div class="slider-pagination">
+                    <div class="slider-pagination cases-pagination">
                         <div class="slider-prev partners-prev">
                             <button class="button button-dark button-circle">
                                 <span class="button-icon i-arrow-short-prev"></span>
@@ -718,7 +736,7 @@
 
             <div class="reviews-row row g-0">
                 <div class="col-md-3">
-                    <div class="counter-v">
+                    <div class="counter-v reviews-counter">
                         <div class="counter-v-list">
                             <div class="counter-v-item">
                                 <div class="counter-v-value">150+</div>
@@ -733,7 +751,7 @@
                 </div>
                 <div class="col-md-9">
                     <div class="slider-controls">
-                        <div class="slider-pagination">
+                        <div class="slider-pagination reviews-pagination">
                             <div class="slider-prev reviews-prev">
                                 <button class="button button-dark button-circle">
                                     <span class="button-icon i-arrow-short-prev"></span>
@@ -836,6 +854,7 @@
                 </div>
             </div>
         </div>
+        <div class="privacy-image" style="background-image: url(assets/img/privacy-bg.jpg)"></div>
     </div>
 
     <div class="section news">
@@ -850,7 +869,7 @@
             </h4>
 
             <div class="news-list">
-                <div class="slider-controls">
+                <div class="slider-controls news-controls">
                     <div class="slider-pagination">
                         <a href="javascript:void(0)" class="button button-dark button-red-text">Все новости</a>
                         <div class="slider-prev news-prev">
@@ -924,14 +943,18 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="slider-scroll news-scroll"></div>
             </div>
 
             <div class="consult-free">
                 <div class="consult-free-row row">
                     <div class="col-md-6">
-                        <div class="consult-free-title">Заказать звонок</div>
-                        <h4 class="section-title">Оставьте заявку <br>на бесплатную консультацию</h4>
-                        <img src="assets/img/logo-dark.png" alt="" class="consult-free-logo">
+                        <div class="consult-free-flex">
+                            <div class="consult-free-title">Заказать звонок</div>
+                            <h4 class="section-title">Оставьте заявку <br>на бесплатную консультацию</h4>
+                            <img src="assets/img/logo-dark.png" alt="" class="consult-free-logo">
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <div class="consult-free-form">
@@ -1001,8 +1024,8 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
-            <div class="row">
+        <div class="container-fluid container-map">
+            <div class="row g-0">
                 <div class="col-md-6 offset-md-6">
                     <div id="map" style="width: 100%; height: 600px"></div>
                 </div>
@@ -1013,12 +1036,12 @@
     <div id="footer" class="section footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-2">
+                <div class="col-lg-2 col-md-3 col-sm-12">
                     <a href="/" class="footer-logo">
                         <img src="assets/img/logo-dark.png" alt="">
                     </a>
                 </div>
-                <div class="col-md-2">
+                <div class="col-lg-2 col-md-3 col-sm-12">
                     <ul class="footer-nav">
                         <li class="footer-nav-item">
                             <a href="javascript:void(0)" class="footer-link">Услуги</a>
@@ -1031,7 +1054,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-2">
+                <div class="col-lg-2 col-md-3 col-sm-12">
                     <ul class="footer-nav">
                         <li class="footer-nav-item">
                             <a href="javascript:void(0)" class="footer-link">Новости</a>
@@ -1041,7 +1064,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-2">
+                <div class="col-lg-2 col-md-3 col-sm-12">
                     <ul class="footer-nav">
                         <li class="footer-nav-item">
                             <a href="tel:+74952551180" class="footer-link">
@@ -1055,7 +1078,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-4 col-footer-button">
+                <div class="col-lg-4 col-md-12 col-sm-12 col-footer-button">
                     <button class="button button-dark button-dark-border button-lg">
                         <span>Бесплатная консультрация</span>
                         <i class="button-icon i-arrow-long-right"></i>
