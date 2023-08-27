@@ -1,6 +1,12 @@
 $(document).ready(function() {
     // $(".header, .hero, .company, .services, .consult, .specs, .quote, .cases, .partners, .reviews").hide();
 
+    const burger_button = $("#burger_button");
+    const services_link = $("#open_services");
+    const overlay = $(".overlay");
+    const body = $("body");
+    const burger_menu = $(".burger-menu");
+
     const hero_slider = new Swiper(".hero-slider", {
         slidesPerView: 1,
         loop: true,
@@ -34,6 +40,10 @@ $(document).ready(function() {
         navigation: {
             nextEl: ".spec-next",
             prevEl: ".spec-prev",
+        },
+
+        scrollbar: {
+            el: ".specs-scroll"
         },
 
         breakpoints: {
@@ -137,6 +147,33 @@ $(document).ready(function() {
     });
 
     Fancybox.bind("[data-fancybox]", {});
+
+    // burger script
+    burger_button.on("click", function() {
+        openBurger();
+    });
+
+    const openBurger = () => {
+        if (body.hasClass("open-services")) {
+            body.removeClass("open open-services");
+            overlay.stop().slideToggle();
+            $(".services-menu").stop().slideToggle();
+        } else {
+            body.toggleClass("open open-burger");
+            burger_menu.stop().slideToggle();
+            overlay.stop().slideToggle();
+        }
+    }
+
+    const openServices = () => {
+        body.toggleClass("open open-services");
+        overlay.stop().slideToggle();
+        $(".services-menu").stop().slideToggle();
+    }
+
+    services_link.on("click", function() {
+        openServices();
+    });
 
     // map
     ymaps.ready(init);

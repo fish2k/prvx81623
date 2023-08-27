@@ -194,6 +194,8 @@ body {
     background-color: #fff;
     top: 0;
     width: 100%;
+
+    transition: all .2s ease-in-out;
 }
 
 .burger-icon-line:last-child {
@@ -1068,4 +1070,106 @@ body {
 
 .contacts-mobile {
     display: none;
+}
+
+.overlay {
+    position: absolute;
+    top: 44px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(15, 15, 15, 0.95);
+    z-index: 2;
+    display: none;
+}
+
+.header.open {
+    height: 100%;
+}
+
+.burger-menu {
+    position: relative;
+    z-index: 3;
+    display: none;
+
+    padding-top: 60px;
+}
+
+.burger-menu-link {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.burger-menu-item {
+    margin-bottom: 30px;
+}
+
+.burger-menu-wrap {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.open-burger #burger_button {
+    z-index: 3;
+}
+
+.open {
+    overflow: hidden;
+}
+
+#burger_button {
+    z-index: 3;
+}
+
+.open #header {
+    height: 100%;
+}
+
+.services-menu {
+    display: none;
+}
+
+.open-services .header-second-row {
+    position: relative;
+    z-index: 3;
+}
+
+.header-logo {
+    position: relative;
+    z-index: 3;
+}
+
+.services-menu {
+    position: relative;
+    z-index: 3;
+}
+
+.services-menu .button {
+    border-color: transparent;
+}
+
+.services-menu .button-icon::before {
+    color: var(--gray);
+}
+
+.services-menu .button:hover {
+    background-color: var(--white);
+}
+
+.services-menu .button:hover .button-icon::before {
+    color: var(--black);
+}
+
+.open-burger .burger-icon-line:first-child {
+    transform: rotate(135deg);
+    top: 50%;
+}
+
+.open-burger .burger-icon-line:last-child {
+    transform: rotate(-135deg);
+    top: 50%;
 }
